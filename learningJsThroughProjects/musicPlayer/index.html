@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle">
+                    <i class="fa fa-angle-left"></i>
+                    </div>
+                    <div class="circle">
+                        <i class="material-icons">menu</i>
+                    </div>
+                    </nav>
+                    <img src="468-thumbnail.png" class="song-img">
+                    <h1>Aur ho</h1>
+                    <p>rockstar</p>
+                
+            <audio controls id="song">
+                <source src="Aur Ho_192(Ghantalele.com).mp3">
+            </audio>
+
+            <input type="range" value = "0" id="progress">
+
+            <div class="controls">
+                <div>
+                    <i class="fa fa-backward"></i>
+                </div>
+                
+
+                <div onclick="playPause()"><i class="fa fa-play-circle" id="ctrlIcon"></i></div>
+
+
+                <div><i class="fa fa-forward"></i></div>
+            </div>
+
+        </div>
+    </div>
+    
+
+   <script>
+    let progress = document.getElementById("progress");
+    let song  = document.getElementById("song");
+    let ctrlIcon = document.getElementById("progress");
+
+    song.onloadedmetadata = function(){
+        progress.max = song.duration;
+        progress.value = song.currentTime;
+
+    }
+    function playPause(){
+        if(ctrlIcon.classList.contains(" fa fa-pause")){
+            song.pause();
+            ctrlIcon.classList.remove(" fa fa-pause");
+            ctrlIcon.classList.add("fa-play");
+        }
+        else{
+            song.play();
+
+            ctrlIcon.classList.add("fa fa-pause");
+            ctrlIcon.classList.remove("fa fa-play");
+
+
+        }
+    }
+   </script>
+</body>
+</html>

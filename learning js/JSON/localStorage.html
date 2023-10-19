@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+<body>
+    <script>
+
+       
+        // here name is key and aman singh is value, aur ye jo key value hai permenantly save ho jayegi hamamre local storage me
+
+     //   localStorage.setItem('Name', 'jatin sharma');
+  
+        
+      // localStorage.setItem('age', '22'); // set item
+
+       console.log(localStorage.getItem('Name')) // get item 
+       // ab agar hm jatin sharma key value ko comment out bhi krde phir bhi uski value ko access kr skte hai kyuki wo ab storage me permanently store ho chuki hai
+
+       let product = {
+            name: 'tShirt',
+            price: 789,
+            rating: {
+                stars: 4.5,
+                noOfReviews: 453,
+            },
+
+        };
+
+
+      //  localStorage.setItem('product', JSON.stringify(product))  
+        // pehle string me convert krna padega obj ko tbhi to store hoga localstorage me, local storage me store sirf string hi kr skte hai
+
+      //  console.log(localStorage.getItem('product'))
+
+        //let product2 = JSON.parse(localStorage.getItem('product'));
+
+        // wapas convert  krdiya string me 
+      //  console.log(product2);
+
+        localStorage.removeItem('age'); // ab age wali key value pair remove ho jayegi permmenantly localstorage se
+    
+      localStorage.clear(); // purs local storage clear ho jayega ab
+
+     
+
+
+    </script>
+</body>
+</html>

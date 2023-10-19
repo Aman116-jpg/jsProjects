@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        // let product = {
+        //     company: 'Mango',
+        //     price: 861,
+        //     item_name: 'T-shirt',
+
+
+
+        // };
+    //     console.log( product) // pura object ek baar me access krrhe hai
+    //     console.log( product.company)  // product k andar ki particular key ki value ko access krre hai using dot operator
+    //     console.log( product.item_name)
+
+    //     product.company = 'babayaga'  // company ki value change krdi
+    //     product.item_name = 'gili-kacchi'
+    //     console.log(product)
+    //     console.log(product.company)
+
+    //     console.log(product['company']) // [] ki help se bhi access kr skte hai company ki value
+
+    //   delete product.company;  // company delete krdi obj se
+    //   console.log(product);
+
+
+    // function inside a product is called methods
+    // let product = {
+    //         company: 'Mango',
+    //         price: 861,
+    //         item_name: 'T-shirt',
+    //         displayPrice : function(){
+    //             console.log(`price of the product is ${this.price}`)
+    //         }
+
+
+
+    //     };
+    //    product.displayPrice();
+
+       console.log('this is KG coding' .toUpperCase());
+       console.log('this is KG coding' .replace('KG', 'knowledge Gate'));
+
+       let a = 5;
+       let b = a;
+       console.log(`a=${a}, b=${b}`)
+       a= 8;
+       console.log(`a=${a}, b=${b}`)  // pass by value , b  ki value change nhi hogi 
+
+       let x= {
+        num: 5,
+
+       }
+       let y = x;
+       console.log( `x =${x.num}, y=${y.num} `);
+ x.num = 8;// objects works based on references , b  ki vlaue bhi update ho jayegi
+ console.log( `x =${x.num}, y=${y.num} `);
+
+
+ let p = {pop: 'iujh'}
+ let q = {pop: 'iujh'}
+ console.log(p == q);  // false kyuki address of dono obj alag hai
+
+
+
+
+ // objects shortcuts
+ // accessing the element of obj by annother way
+ let product = {
+            company: 'Mango',
+            price: 861,
+            item_name: 'T-shirt',
+
+        };
+        // let  {company} = product;
+        // console.log(company)
+
+        let  {company, price} = product;
+        console.log(company)
+        console.log(price)
+
+      
+
+
+
+
+    </script>
+</body>
+</html>
